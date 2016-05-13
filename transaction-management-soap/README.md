@@ -22,20 +22,28 @@ FIXME: add more stuff
             <result>
                 <amount>1</amount>
                 <blocked>false</blocked>
-                <channelId>WEBSHOP</channelId>
                 <fromAccountNumber>fromAcc</fromAccountNumber>
                 <fromUserLoginName>fromUser</fromUserLoginName>
                 <status>COMPLETED</status>
                 <toAccountNumber>toAcc</toAccountNumber>
                 <toUserLoginName>toUser</toUserLoginName>
                 <transactionNumber>31337</transactionNumber>
-                <transactionType>BUYING_GOODS</transactionType>
             </result>
         </return>
     </ns3:getTransactionResponse>
 </env:Body>
 </env:Envelope>
 ```
+описание полей:
+
+    <amount>1</amount>                               - сумма перевода
+    <blocked>false</blocked>                         - заблокирована ли сумма у отправителя
+    <fromAccountNumber>fromAcc</fromAccountNumber>   - номер счета отправителя
+    <fromUserLoginName>fromUser</fromUserLoginName>  - логин(номер телефона) отправителя
+    <status>COMPLETED</status>                       - статус транзакции
+    <toAccountNumber>toAcc</toAccountNumber>         - номер счета получателя
+    <toUserLoginName>toUser</toUserLoginName>        - логин(номер телефона) получателя
+    <transactionNumber>31337</transactionNumber>     - номер транзакции в системе allpay
 
 
 Запрос для завершения и отклонения транзакции
@@ -60,17 +68,16 @@ FIXME: add more stuff
             <result>
                 <amount>1</amount>
                 <blocked>false</blocked>
-                <channelId>WEBSHOP</channelId>
                 <fromAccountNumber>fromAcc</fromAccountNumber>
                 <fromUserLoginName>fromUser</fromUserLoginName>
                 <status>COMPLETED</status>
                 <toAccountNumber>toAcc</toAccountNumber>
                 <toUserLoginName>toUser</toUserLoginName>
                 <transactionNumber>31337</transactionNumber>
-                <transactionType>BUYING_GOODS</transactionType>
             </result>
         </return>
     </ns3:completeTransactionResponse>
 </env:Body>
 </env:Envelope>
 ```
+Описание полей аналогично запросу getTransactionRequest.xml
