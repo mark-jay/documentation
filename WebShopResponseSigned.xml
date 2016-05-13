@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<WSResp:WebShopResponse xmlns:WSResp="urn:mfs.allpay.kz:WebShop:Response"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="urn:mfs.allpay.kz:WebShop:Response WebShopResponse.xsd">
+    <WSResp:InvoiceNumber>123456890</WSResp:InvoiceNumber>
+    <WSResp:Transaction>
+        <WSResp:TransactionId>String</WSResp:TransactionId>
+        <WSResp:Status>String</WSResp:Status>
+        <WSResp:StatusDescription>String</WSResp:StatusDescription>
+    </WSResp:Transaction>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <Reference URI="">
+                <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <DigestValue>gcdN8F5281ca1bsvuwVO93ZNKSc=</DigestValue>
+            </Reference>
+        </SignedInfo>
+        <SignatureValue>fd2yWyOqn4/u78ynuucnh+W8MQD7F5FDG2u+6qeshWoL1klZ4BFYQ0ZC0xYemZk/204MkpUEvjtt
+            rsYkrBB/oCBygpWBqKYz9jNaeW5d1volcvPC8Nny2KdNdpcNxMqLi1y5GFCslo4GNBJ/Fnk50Ozg
+            Adog/ivSK2grSYUuYog=
+        </SignatureValue>
+    </Signature>
+</WSResp:WebShopResponse>

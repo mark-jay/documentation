@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<WSReq:WebShopRequest xmlns:WSReq="urn:mfs.allpay.kz:WebShop:Request"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="urn:mfs.allpay.kz:WebShop:Request WebShopRequest.xsd">
+    <WSReq:ShopName>a</WSReq:ShopName>
+    <WSReq:Invoice>
+        <WSReq:InvoiceNumber>a</WSReq:InvoiceNumber>
+        <WSReq:InvoiceStatus>String</WSReq:InvoiceStatus>
+        <WSReq:InvoiceStatusDescription>String</WSReq:InvoiceStatusDescription>
+    </WSReq:Invoice>
+    <WSReq:Merchant>
+        <WSReq:MerchantID>a</WSReq:MerchantID>
+        <WSReq:WalletID>a</WSReq:WalletID>
+    </WSReq:Merchant>
+    <WSReq:Cart>
+        <WSReq:Items>
+            <WSReq:Code>String</WSReq:Code>
+            <WSReq:Name>String</WSReq:Name>
+            <WSReq:Description>String</WSReq:Description>
+            <WSReq:Quantity>0.0</WSReq:Quantity>
+            <WSReq:Cost>0.0</WSReq:Cost>
+        </WSReq:Items>
+        <WSReq:Items>
+            <WSReq:Code>String</WSReq:Code>
+            <WSReq:Name>String</WSReq:Name>
+            <WSReq:Description>String</WSReq:Description>
+            <WSReq:Quantity>0.0</WSReq:Quantity>
+            <WSReq:Cost>0.0</WSReq:Cost>
+        </WSReq:Items>
+        <WSReq:Items>
+            <WSReq:Code>String</WSReq:Code>
+            <WSReq:Name>String</WSReq:Name>
+            <WSReq:Description>String</WSReq:Description>
+            <WSReq:Quantity>0.0</WSReq:Quantity>
+            <WSReq:Cost>0.0</WSReq:Cost>
+        </WSReq:Items>
+    </WSReq:Cart>
+    <WSReq:TotalCost>0.0</WSReq:TotalCost>
+    <WSReq:RedirectURL>String</WSReq:RedirectURL>
+    <WSReq:FailureLink>String</WSReq:FailureLink>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+            <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <Reference URI="">
+                <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <DigestValue>6622L42pycoMiLmGDL4SN9MyGgI=</DigestValue>
+            </Reference>
+        </SignedInfo>
+        <SignatureValue>M66k6jz5/iuYNaLxZlL3MfN1NCqtm6p7Jj/FqWXPX/HJMOakUfwKd/I7mCdFAaKcKI//kvNm6kQx
+            /T+JR+QoS2t2GZICEGiOq6Sc9Hl86Mz+niQu4JqGGINFZ3XMZoAsI7SK+Y/Q3Qiczs4iP0Au+ahZ
+            wUjtULD5YnMFPbCfBr4=
+        </SignatureValue>
+    </Signature>
+</WSReq:WebShopRequest>
