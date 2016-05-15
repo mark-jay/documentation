@@ -83,8 +83,16 @@
 
 ### ПРИМЕРЫ РЕАЛИЗАЦИЙ
 
-Все демо проекты находятся [здесь](https://github.com/allpaykz/webshop-service-examples)
+Исходный код демо проектов находится [здесь](https://github.com/allpaykz/webshop-service-examples)
 
 ##### РЕАЛИЗАЦИЯ НА ЯЗЫКЕ JAVA
 
+Исходный код проекта [здесь](https://github.com/allpaykz/webshop-service-examples/tree/master/webshop-integration-demo). Для запуска проекта нужно склонировать репозиторий:
+
+    $ git clone https://github.com/allpaykz/webshop-service-examples
+
+Для сборки проекта используется `maven 3`. После успешной сборки проекта появится `war` файл `webshop-service-examples/webshop-integration-demo/target/webshop-integration-rest.war`.
+
 ##### РЕАЛИЗАЦИЯ НА ЯЗЫКЕ PHP
+
+Исходный код демо проекта на PHP находится в стадии разработки и появится в скором времени
