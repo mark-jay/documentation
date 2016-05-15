@@ -76,4 +76,4 @@
 
 ### СЕРВИСЫ-МАНИПУЛИРОВАНИЯ-ТРАНЗАКЦИЯМИ
 
-Описание находится в [соотвествующем](https://github.com/allpaykz/documentation/tree/master/transaction-management-soap) разделе.
+Описание находится в [соответствующем](https://github.com/allpaykz/documentation/tree/master/transaction-management-soap) разделе.
