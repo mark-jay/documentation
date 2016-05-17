@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://www.allpay.kz/mfs/soap/TransactionManagement" xmlns:xd="http://www.w3.org/2000/09/xmldsig">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tran:getTransaction>
+         <!--Optional:-->
+         <GetTransactionRequest>
+             <!--Optional:-->
+             <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+                    <SignedInfo>
+                        <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+                        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+                        <Reference URI="">
+                            <Transforms>
+                                <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                            </Transforms>
+                            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                            <DigestValue>gcdN8F5281ca1bsvuwVO93ZNKSc=</DigestValue>
+                        </Reference>
+                    </SignedInfo>
+                    <SignatureValue>EbEv86Ugl7kwNrxRQZ3P6k/luHcERKstWZcVNQN9ZMc4un3zOM6m/Q==</SignatureValue>
+                    <KeyInfo>
+                        <KeyValue>
+                            <DSAKeyValue>
+                                <P>/X9TgR11EilS30qcLuzk5/YRt1I870QAwx4/gLZRJmlFXUAiUftZPY1Y+r/F9bow9subVWzXgTuA
+                                HTRv8mZgt2uZUKWkn5/oBHsQIsJPu6nX/rfGG/g7V+fGqKYVDwT7g/bTxR7DAjVUE1oWkTL2dfOu
+                                K2HXKu/yIgMZndFIAcc=
+                                </P>
+                                <Q>l2BQjxUjC8yykrmCouuEC/BYHPU=</Q>
+                                <G>9+GghdabPd7LvKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3
+                                zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImog9/hWuWfBpKL
+                                Zl6Ae1UlZAFMO/7PSSo=
+                                </G>
+                                <Y>7MHcj1nEytl2jHY2ymbbNGOcKs6lYxLi5PPd7C/y3drRRTd6nshekxtBK6F4tyxn9aioVufeqHTS
+                                P46TQe6Qc4tm1OmkxB4/JS1ZrQb18Spem/wa0UR+z7HjwwKTPExTiuyVOgZUO01OufCd00x/lT3h
+                                NxceIz2AmxQ8L8pKanY=
+                                </Y>
+                            </DSAKeyValue>
+                        </KeyValue>
+                    </KeyInfo>
+                </Signature>
+            <transactionNumber>1</transactionNumber>
+         </GetTransactionRequest>
+      </tran:getTransaction>
+   </soapenv:Body>
+</soapenv:Envelope>
