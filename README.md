@@ -100,4 +100,5 @@
 
 ##### РЕАЛИЗАЦИЯ НА ЯЗЫКЕ PHP
 
-Исходный код демо проекта на PHP находится в стадии разработки и появится в скором времени
+Исходный код проекта [здесь](https://github.com/allpaykz/webshop-service-examples/tree/master/webshop-integration-php-demo)
+
