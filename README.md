@@ -112,5 +112,5 @@
 
 ##### РЕАЛИЗАЦИЯ НА ЯЗЫКЕ PHP
 
-Исходный код проекта [здесь](https://github.com/allpaykz/webshop-service-examples/tree/master/webshop-integration-php-demo)
+Исходный код проекта и описание [здесь](https://github.com/allpaykz/webshop-service-examples/tree/master/webshop-integration-php-demo)
 
