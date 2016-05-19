@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<WSResp:WebShopResponse xmlns:WSResp="urn:mfs.allpay.kz:WebShop:Response"
+<WSResp:WebShopResponse xmlns:WSResp="http://allpay.kz/xsd/1.0.0/WebShopResponse.xsd"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                        xsi:schemaLocation="urn:mfs.allpay.kz:WebShop:Response WebShopResponse.xsd">
+                        xsi:schemaLocation="http://allpay.kz/xsd/1.0.0/WebShopResponse.xsd">
     <WSResp:InvoiceNumber>123456890</WSResp:InvoiceNumber>
     <WSResp:Transaction>
         <WSResp:TransactionId>String</WSResp:TransactionId>
@@ -17,12 +17,12 @@
                     <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
                 </Transforms>
                 <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <DigestValue>UpBBYu+YuFC5oJLaW7P9xxg3cwE=</DigestValue>
+                <DigestValue>iN6CHtvVOCF+cbzSp2SarMY/Sf4=</DigestValue>
             </Reference>
         </SignedInfo>
-        <SignatureValue>IqwL3fH2VXlDw8z6MUIr/bcIlD5n1VvW2JX/jyj9NbEBUOuwVpdNRQwlmyhpTraza4wGM+4C1/Ix
-            BtOoIebs5F4k5lrY+IGD7Md9+4kbs9yqQHsHsbVdI82hg71lC3rb/FOy99eoRoVQhL++8faDJ1H6
-            wC0dWktmRJYUGK2vlpA=
+        <SignatureValue>wrCvdbJCV6v2tKwVQp7Iukh3deTOO6kKDePBmcXz69CGo77SW3KxCE0FxltgtKhB0hJ2HLofUaZ2
+            BBtqq/l6h8RuPM5hZVgaAWjS+z2k9uLJx1KC9eluBRXKO9rDiafLEqRYQuOdmw8qE9nnuZi9ZtEw
+            EmroWD6/xcEdiDMT49s=
         </SignatureValue>
     </Signature>
 </WSResp:WebShopResponse>

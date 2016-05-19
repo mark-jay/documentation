@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<WSReq:WebShopRequest xmlns:WSReq="urn:mfs.allpay.kz:WebShop:Request"
+<WSReq:WebShopRequest xmlns:WSReq="http://allpay.kz/xsd/1.0.0/WebShopRequest.xsd"
                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                      xsi:schemaLocation="urn:mfs.allpay.kz:WebShop:Request WebShopRequest.xsd">
+                      xsi:schemaLocation="http://allpay.kz/xsd/1.0.0/WebShopRequest.xsd">
     <WSReq:ShopName>string</WSReq:ShopName>
     <WSReq:InvoiceNumber>string</WSReq:InvoiceNumber>
     <WSReq:Merchant>
@@ -36,12 +36,12 @@
                     <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
                 </Transforms>
                 <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-                <DigestValue>XqTSkqA4902fAGQCJVboOnyDwuY=</DigestValue>
+                <DigestValue>WvtifmGYsFTzrV9eMVJcSxs2WHQ=</DigestValue>
             </Reference>
         </SignedInfo>
-        <SignatureValue>p0NeH02AXkukXPAxALJWWNtzrCAaGMvpzjH1EiJKMd0g1bYWULqvu3H6ErXdT4kdE4tfDIxqE5JL
-            Twh9WCslofCVIht9v/2U03kulEzp/3EcderobDSK5JmE2r1pc9ZTyvVyXqblo/JYRCUWk5zBHlQx
-            NG0nYYDCPYYJZ4EHRq4=
+        <SignatureValue>FyvvSKXotxTQ6pzuBY4UWUS8U/upHDHtxFstpCFG2vvi5GeUl8HFo5E3vxOetC26+a3SS9MmAIGa
+            DxvcHz2VH4KgwbbyCm/H3kH9XXKBUSYUojpnaUZ4Ton3yo0WUHQ9NjLTBhBrwh9CuwpU7nEC2mUL
+            h5POSYjbUcgdliTNwDk=
         </SignatureValue>
     </Signature>
 </WSReq:WebShopRequest>
