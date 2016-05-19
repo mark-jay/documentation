@@ -8,7 +8,7 @@
 1. [СЦЕНАРИЙ ПЛАТЕЖА](#СЦЕНАРИЙ-ПЛАТЕЖА)
 1. [ПРИНЦИПЫ ВЗАИМОДЕЙСТВИЯ МЕЖДУ МАГАЗИНОМ И ПС ALLPAY](#ПРИНЦИПЫ-ВЗАИМОДЕЙСТВИЯ-МЕЖДУ-МАГАЗИНОМ-И-ПС-ALLPAY)
 1. [ОПИСАНИЕ ФОРМАТА СООБЩЕНИЙ](#ОПИСАНИЕ-ФОРМАТА-СООБЩЕНИЙ)
- 2. [WesbshopRequest](webshoprequest)
+ 2. [WesbshopRequest](#webshoprequest)
  2. [WebshopResponse](#webshopresponse)
 1. [ТЕХНИЧЕСКИЕ ДЕТАЛИ ВЗАИМОДЕЙСТВИЯ](#ТЕХНИЧЕСКИЕ-ДЕТАЛИ-ВЗАИМОДЕЙСТВИЯ)
 1. [СЕРВИСЫ МАНИПУЛИРОВАНИЯ ТРАНЗАКЦИЯМИ](#СЕРВИСЫ-МАНИПУЛИРОВАНИЯ-ТРАНЗАКЦИЯМИ)
@@ -106,7 +106,9 @@
 
     $ git clone https://github.com/allpaykz/webshop-service-examples
 
-Для сборки проекта используется `maven 3`. После успешной сборки проекта появится `war` файл `webshop-service-examples/webshop-integration-demo/target/webshop-integration-rest.war`.
+Для сборки проекта используется `maven 3`. Сборку нужно запускать с профилем `demo_for_github` командой `mvn clean install -P demo_for_github`
+
+После успешной сборки проекта появится `war` файл `webshop-service-examples/webshop-integration-demo/target/webshop-integration-rest.war`.
 
 ##### РЕАЛИЗАЦИЯ НА ЯЗЫКЕ PHP
 
