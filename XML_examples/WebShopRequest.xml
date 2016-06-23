@@ -26,6 +26,7 @@
     <!--Optional:-->
     <WSReq:FailureLink>string</WSReq:FailureLink>
     <WSReq:TimeoutInSeconds>600</WSReq:TimeoutInSeconds>
+    <WSReq:ResponseURL>string2</WSReq:ResponseURL>
     <WSReq:AutoTransaction>false</WSReq:AutoTransaction>
     <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
         <SignedInfo>
