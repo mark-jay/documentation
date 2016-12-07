@@ -120,6 +120,8 @@
 
 ### ПРИМЕРЫ РЕАЛИЗАЦИЙ
 
-Исходный код демо проектов находится [здесь](https://github.com/allpaykz/webshop-service-examples)
+Исходный код демо проектов находится [здесь](https://github.com/allpaykz/allpay-public/tree/master/allpay-public-soap)
 
 ##### РЕАЛИЗАЦИЯ НА ЯЗЫКЕ JAVA
+
+Проект находится [здесь](https://github.com/allpaykz/allpay-public/tree/master/allpay-public-soap)
