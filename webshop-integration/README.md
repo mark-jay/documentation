@@ -10,6 +10,8 @@
 1. [ОПИСАНИЕ ФОРМАТА СООБЩЕНИЙ](#ОПИСАНИЕ-ФОРМАТА-СООБЩЕНИЙ)
  2. [WesbshopRequest](#webshoprequest)
  2. [WebshopResponse](#webshopresponse)
+ 2. [WebshopCustomerResponse](#webshopcustomerresponse)
+1. [Версии протокола](#ВЕРСИИ-ПРОТОКОЛА)
 1. [ТЕХНИЧЕСКИЕ ДЕТАЛИ ВЗАИМОДЕЙСТВИЯ](#ТЕХНИЧЕСКИЕ-ДЕТАЛИ-ВЗАИМОДЕЙСТВИЯ)
 1. [СЕРВИСЫ МАНИПУЛИРОВАНИЯ ТРАНЗАКЦИЯМИ](#СЕРВИСЫ-МАНИПУЛИРОВАНИЯ-ТРАНЗАКЦИЯМИ)
 2. [ИСПОЛЬЗОВАНИЕ ТЕСТОВОЙ СИСТЕМЫ ALLPAY](#ИСПОЛЬЗОВАНИЕ-ТЕСТВОЙ-СИСТЕМЫ-ALLPAY)
@@ -59,6 +61,7 @@
 6. `WSReq:TimeOutInSeconds` Таймаут транзакции. Минимальное значение 600, максимальное 86400. Обязательное для заполнения
 6. `WSReq:SuccessLink` URL Ссылка магазина, на которую попадёт Покупатель после удачного платежа. Обязательное для заполнения
 6. `WSReq:ResponseURL` URL Ссылка магазина, на которую высылается ответ после удачного/неудачного платежа. Обязательное для заполнения
+6. `WSReq:ProtocolVersion` Номер протокола, по которому будут обрабатываться ответы на WebshopResponse. [Подробнее](#ВЕРСИИ-ПРОТОКОЛА)
 7. `WSReq:FailureLink` URL Ссылка магазина, на которую попадёт Покупатель в случае неудачного платежа. Обязательное для заполнения
 8. `WSReq:AutoTransaction` Автономное проведение транзакции. По умолчанию значение `false`. Если значение `true`, то ПС сама завершает транзакцию. Если значение `false`, то ПС замораживает деньги на счету Покупателя. Для завершение или отмена транзакции ПС предоставляет сервисы манупулирования транзакциями. Описание сервисов [здесь](https://github.com/allpaykz/documentation/tree/master/public-soap-integration)
 8. `Signature` Подпись. Обязательное для заполнения
@@ -70,6 +73,34 @@
  4. `WSResp:Status` Статус транзакции. Обязательное для заполнения
  5. `WSResp:StatusDescription` Описание статуса транзакции. Обязательное для заполнения
 2. `Signature` Подпись. Обязательное для заполнения
+
+#### WebshopCustomerResponse
+
+Пример XML приведён в файле WebShopCustomerResponse.xml. Далее будет приведено описание и назначение каждого поля.
+
+1. `WSCResp:Status` Статус платежа на интегрирующейся стороне. Значения смотрите в таблице. Обязательное для заполнения
+2. `WSCResp:Reason` Описание причины данного статуса. Необходимость заполнения данного поля смотрите в таблице.
+
+|Status  |Reason          |
+|--------|----------------|
+|DONE    |doesn't required|
+|PENDING |doesn't required|
+|FAIL    |required        |
+
+#### ВЕРСИИ ПРОТОКОЛА
+
+##### Первая версия протокола. 
+
+При отправке [WebShopResponse](https://github.com/allpaykz/allpay-public/blob/develop/webshop-integration/webshop-integration-keypair/src/main/resources/xsd/1.0.0/WebShopResponse.xsd) интегрирующейся стороне, ПС проверяет только статус HTTP запроса. Если HTTP.statusCode = 200, то платеж завершается, в противном случае платеж отклоняется.
+
+##### Вторая версия протокола
+
+При отправке [WebShopResponse](https://github.com/allpaykz/allpay-public/blob/develop/webshop-integration/webshop-integration-keypair/src/main/resources/xsd/1.0.0/WebShopResponse.xsd) интегрирующейся стороне, ПС ждет ответа в формате [WebShopCustomerResponse](https://github.com/allpaykz/allpay-public/blob/develop/webshop-integration/webshop-integration-keypair/src/main/resources/xsd/1.0.0/WebShopCustomerResponse.xsd). Описание смотрите [здесь](#webshopcustomerresponse) 
+
+В запросе [WebShopRequest](https://github.com/allpaykz/allpay-public/blob/develop/webshop-integration/webshop-integration-keypair/src/main/resources/xsd/1.0.0/WebShopRequest.xsd) есть элемент protocolVersion, который работает следующим образом:
+1. Если значение не внесено или равно 1, то обработка пройдет по первой версии протокола.
+2. Если значени равно 2, то обработка пройдет по второй версии протокола.
+3. Если внесено какое-либо другое значение, то при обработке бросится ошибка. На нашей стороне платеж будет в статусе "PENDING". После 5-ой попытки провести платеж, система отправит разработчику письмо с ошибкой.
 
 ### ТЕХНИЧЕСКИЕ ДЕТАЛИ ВЗАИМОДЕЙСТВИЯ
 
